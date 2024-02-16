@@ -105,7 +105,7 @@ The site gives this example of a simple user interface:
 
 Here we have the `Video` **component** on the left, and on the right a rendered version of the blueprint, presumably after being fed data like this:
 
-```json
+```js
 {
   url: "https://example.com",
   title: "My video",
