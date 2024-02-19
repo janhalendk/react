@@ -407,7 +407,7 @@ If we turn to our **Github Finder** we can see that it actually has two properti
 
 They are located in the top and start with `__reactFiber$` and `__reactProps$`. Each of these are followed by the same 10 character long string , `'hsi0r5our5'`. 
 
-This string is a random id React creates when a page loads. If we refresh the page it will change to something else. This will be an issue to solve when creating the final piece of JavaScript that extracts data (== we cannot hard code it - it needs to be )
+This string is a random id React creates when a page loads. If we refresh the page it will change to something else. This will be an issue to solve when creating the final piece of JavaScript that extracts data (== we cannot hard code it - we need to pull it from the website somehow).
 
 ![alt text](./assets/image-44.png)
 
@@ -469,7 +469,7 @@ We go from `__reactFiber$` to `return` and from there to `props`,
 
 ## Alternative routes to the same end
 
-So far we've only been looking at the `__reactFiber` property. But that app also has `__reactProps`. I won't go much into details about this here as this tutorial is already lengthy already.
+So far we've only been looking at the `__reactFiber` property. But that app also has `__reactProps`. I won't go much into details about this here as this tutorial is lengthy already.
 
 However know that if you fail to identify the location of data on the `__reactFiber` other React properties might be worth exploring too. Usually there are more than one way to target the information, we seek.
 
@@ -497,7 +497,7 @@ So we could loop through all the `children` of `<Users>` and output the `user` o
 
 ## Summary
 
-So as it seen there are more than one way to exfiltrate data from React - data is referenced multiple places as seen in this simple app, where it can be found and dumped using both `_reactFiber` and `__reactProps`. 
+As demonstrated there can be more than one *path* to follow to exfiltrate data from React - data is referenced multiple places as seen in this simple app, where it can be found and dumped using both `_reactFiber` and `__reactProps`. 
 
 The used app was really simple so when the project grows and the **Components** tree ends up looking like this:
 
@@ -579,7 +579,7 @@ From there on you can take a closer look at the data structure and copy what eve
 ![alt text](./assets/Pasted%20image%2020240125141607.png)
 
 
-This however is not very scalable. We want something that does not involve developer tools, but can be run from for instance a bookmarketlet or a userscript (Tampermonkey / Greasemonkey or similar).
+This however is not very scalable. We want something that does not involve developer tools, but can be run from for instance a bookmarklet or a userscript (Tampermonkey / Greasemonkey or similar).
 
 So as with the **Github Finder** we need to locate the place in the real `DOM` where we can access the right properties / path.
 
