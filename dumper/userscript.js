@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ReactSearch
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Dump raw JSON data from React based web sites
 // @author       janhalendk
 // @match        *://*/*
@@ -282,3 +282,4 @@
   GM_registerMenuCommand("reactFiber", searchTerm);
 
 })();
+
