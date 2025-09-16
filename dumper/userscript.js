@@ -8,6 +8,7 @@
 // @icon         https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://react.dev&size=64
 // @grant        GM_registerMenuCommand
 // @grant        GM_setClipboard
+// @noframes
 
 // ==/UserScript==
 
@@ -279,4 +280,5 @@
       console.log(`[*] Keyword search complete: ${hitCount} matches found`);
   }
   GM_registerMenuCommand("reactFiber", searchTerm);
+
 })();
